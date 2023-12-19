@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Button Style Changer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <button id="myButton">Örnek Buton</button>
+    <div class="options">
+        <div class="category">
+            <input type="checkbox" id="borderCategory">
+            <label for="borderCategory" class="Header">Kenarlık Ayarları</label>
+            <div class="borderOptions">
+                <label for="borderRadius">Border Radius:</label>
+                <input type="range" id="borderRadius" min="0" max="50" value="5">
+                <label for="borderWidth">Border Width:</label>
+                <input type="range" id="borderWidth" min="1" max="50" value="5">
+                <label for="borderColor">Border Color:</label>
+                <input type="color" id="borderColor">
+            </div>
+        </div>
+        <div class="category">
+            <input type="checkbox" id="backgroundCategory">
+            <label for="backgroundCategory" class="Header">Arka Plan Ayarları</label>
+            <div class="backgroundOptions">
+                <label for="backgroundColor">Background Color:</label>
+                <input type="color" id="backgroundColor">
+
+                <label for="backgroundGradient"><input type="checkbox" id="backgroundGradient">Arka Plan Gradient</label>
+
+                    <div class="backgroundGradientOptions">
+                        <label for="gradientStartColor">Gradient Start Color:</label>
+                        <input type="color" id="gradientStartColor">
+                        <label for="gradientEndColor">Gradient End Color:</label>
+                        <input type="color" id="gradientEndColor">
+                        <label for="gradientDirection">Gradient Direction:</label>
+                        <select id="gradientDirection">
+                            <option value="to right">Left to Right</option>
+                            <option value="to bottom">Top to Bottom</option>
+                            <option value="to bottom right">Top Left to Bottom Right</option>
+                            <option value="to bottom left">Top Right to Bottom Left</option>
+                        </select>
+                    </div>
+                </div>
+        </div>
+        <div class="category">
+            <input type="checkbox" id="textCategory">
+            <label for="textCategory" class="Header">Metin Ayarları</label>
+            <div class="textOptions">
+                <label for="textColor">Text Color:</label>
+                <input type="color" id="textColor">
+                <label for="fontFamily">Font Family:</label>
+                <select id="fontFamily">
+                    <option value="Arial">Arial</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Courier New">Courier New</option>
+                </select>
+                <label for="fontSize">Font Size:</label>
+                <input type="number" id="fontSize" min="8" max="100" value="40">
+            </div>
+        </div>
+    </div>
+    
+    <div class="output mt-100">
+        <div for="cssOutput" class="Header">Yapılan Değişiklikler:</div>
+        <textarea id="cssOutput" rows="6" readonly></textarea>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
